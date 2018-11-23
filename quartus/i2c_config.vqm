@@ -1,0 +1,1628 @@
+// Copyright (C) 1991-2008 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions
+// and other software and tools, and its AMPP partner logic
+// functions, and any output files from any of the foregoing
+// (including device programming or simulation files), and any
+// associated documentation or information are expressly subject
+// to the terms and conditions of the Altera Program License
+// Subscription Agreement, Altera MegaCore Function License
+// Agreement, or other applicable license agreement, including,
+// without limitation, that your use is for the sole purpose of
+// programming logic devices manufactured by Altera and sold by
+// Altera or its authorized distributors.  Please refer to the
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II"
+// VERSION "Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Full Version"
+
+// DATE "02/27/2009 16:56:44"
+
+module 	i2c_config (
+	clk,
+	rst_n,
+	sdat_inout,
+	sclk_out,
+	param_status_out,
+	finished_out);
+input 	clk;
+input 	rst_n;
+inout 	sdat_inout;
+output 	sclk_out;
+output 	[9:0] param_status_out;
+output 	finished_out;
+wire \Add0~148 ;
+wire \Add0~152 ;
+wire \Add0~156 ;
+wire \Add0~160 ;
+wire \Add1~97 ;
+wire \rom_data_r[6] ;
+wire sclk_en_r;
+wire \clk_divider_r[4] ;
+wire \Equal0~99 ;
+wire \Equal1~69 ;
+wire \Decoder0~192 ;
+wire \Selector0~126 ;
+wire \sdat_inout~75 ;
+wire \Selector0~127 ;
+wire \Selector0~128 ;
+wire \Mux0~263 ;
+wire \i2c_main~17 ;
+wire \curr_state_r.prep_ack~188 ;
+wire \data_r[21] ;
+wire \data_r[6] ;
+wire \data_r[4] ;
+wire \data_r[12] ;
+wire \Selector16~133 ;
+wire \data_r[7] ;
+wire \Selector16~134 ;
+wire \Selector16~135 ;
+wire \Selector16~136 ;
+wire \data_r[11] ;
+wire \data_r[0] ;
+wire \Selector3~176 ;
+wire \rom_data_r[4] ;
+wire \rom_data_r[12] ;
+wire \rom_data_r[7] ;
+wire \rom_data_r[11] ;
+wire \rom_data_r[0] ;
+wire \Mux3~21 ;
+wire \Mux6~19 ;
+wire \data_r[11]~feeder ;
+wire \data_r[0]~feeder ;
+wire \data_r[21]~feeder ;
+wire \sdat_inout~5 ;
+wire \clk~clkctrl ;
+wire \Add0~145 ;
+wire \Add0~146 ;
+wire \rst_n~clkctrl ;
+wire \clk_divider_r[1] ;
+wire \Add0~147 ;
+wire \Add0~149 ;
+wire \Add0~150 ;
+wire \clk_divider_r[3] ;
+wire \Add0~151 ;
+wire \Add0~153 ;
+wire \Add0~154 ;
+wire \clk_divider_r[5] ;
+wire \Add0~144 ;
+wire \clk_divider_r[0] ;
+wire \clk_divider_r~273 ;
+wire \clk_divider_r[6] ;
+wire \Add0~155 ;
+wire \Add0~157 ;
+wire \Add0~158 ;
+wire \clk_divider_r~272 ;
+wire \clk_divider_r[7] ;
+wire \Add0~159 ;
+wire \Add0~161 ;
+wire \Add0~162 ;
+wire \clk_divider_r[9] ;
+wire \Add0~163 ;
+wire \Add0~164 ;
+wire \clk_divider_r[10] ;
+wire \Add0~165 ;
+wire \Add0~166 ;
+wire \clk_divider_r~275 ;
+wire \clk_divider_r[11] ;
+wire \clk_divider_r~276 ;
+wire \clk_divider_r[8] ;
+wire \Equal0~101 ;
+wire \clk_divider_r~274 ;
+wire \clk_divider_r[2] ;
+wire \Equal0~100 ;
+wire \Equal0~102 ;
+wire \Equal1~68 ;
+wire \param_counter_r[3]~332 ;
+wire \param_counter_r[1]~335 ;
+wire \param_counter_r[1] ;
+wire \param_counter_r[1]~333 ;
+wire \param_counter_r[3]~334 ;
+wire \param_counter_r[3] ;
+wire \Equal5~33 ;
+wire \param_counter_r[0]~336 ;
+wire \param_counter_r[0] ;
+wire \Equal5~34 ;
+wire \Equal1~70 ;
+wire \curr_state_r.prep_ack~189 ;
+wire \curr_state_r.prep_ack ;
+wire \Selector11~15 ;
+wire \curr_state_r.read_ack ;
+wire \Selector7~56 ;
+wire \curr_state_r.prep_start ;
+wire \curr_state_r.start~18 ;
+wire \curr_state_r.start ;
+wire \Selector9~131 ;
+wire \Selector9~132 ;
+wire \curr_state_r.send_byte ;
+wire \Selector1~46 ;
+wire \Selector1~47 ;
+wire sclk_force_r;
+wire \sclk_r~186 ;
+wire sclk_r;
+wire \Selector0~125 ;
+wire \Selector4~7 ;
+wire \bit_counter_r[2]~250 ;
+wire \bit_counter_r[2]~251 ;
+wire \bit_counter_r[2] ;
+wire \Add1~93 ;
+wire \Selector6~7 ;
+wire \bit_counter_r[0] ;
+wire \Add1~94 ;
+wire \Add1~95 ;
+wire \Selector5~7 ;
+wire \bit_counter_r[1] ;
+wire \Add1~96 ;
+wire \Add1~98 ;
+wire \Add1~99 ;
+wire \Selector3~177 ;
+wire \bit_counter_r[3] ;
+wire \Add1~100 ;
+wire \Add1~101 ;
+wire \Selector2~7 ;
+wire \bit_counter_r[4] ;
+wire \Equal4~37 ;
+wire \Selector12~18 ;
+wire \curr_state_r.prep_stop ;
+wire \curr_state_r.stop ;
+wire \Selector16~131 ;
+wire \Mux0~264 ;
+wire \Selector16~132 ;
+wire \rom_data_r[10] ;
+wire \data_r[21]~151 ;
+wire \data_r[10] ;
+wire \Selector16~138 ;
+wire \Mux4~11 ;
+wire \rom_data_r[2] ;
+wire \data_r[2] ;
+wire \Selector16~139 ;
+wire \Mux5~23 ;
+wire \rom_data_r[1] ;
+wire \data_r[1] ;
+wire \Selector16~140 ;
+wire \rom_data_r[9] ;
+wire \data_r[9] ;
+wire \Selector16~137 ;
+wire \Selector16~141 ;
+wire \Selector16~142 ;
+wire \Selector16~143 ;
+wire \curr_state_r.finished~28 ;
+wire \curr_state_r.finished ;
+wire \sdat_inout~76 ;
+wire \sdat_inout~77 ;
+wire \sdat_inout~reg0 ;
+wire \sdat_inout~enfeeder ;
+wire \sdat_inout~en ;
+wire \Decoder0~190 ;
+wire \Decoder0~189 ;
+wire \param_status_out[0]~190 ;
+wire \param_status_out[0]~reg0 ;
+wire \Decoder0~191 ;
+wire \param_status_out[1]~191 ;
+wire \param_status_out[1]~reg0 ;
+wire \param_counter_r[2]~337 ;
+wire \param_counter_r[2] ;
+wire \param_status_out[2]~192 ;
+wire \param_status_out[2]~reg0 ;
+wire \param_status_out[3]~193 ;
+wire \param_status_out[3]~reg0 ;
+wire \Mux1~13 ;
+wire \param_status_out[4]~194 ;
+wire \param_status_out[4]~reg0 ;
+wire \Decoder0~193 ;
+wire \param_status_out[5]~195 ;
+wire \param_status_out[5]~reg0 ;
+wire \param_status_out[6]~196 ;
+wire \param_status_out[6]~reg0 ;
+wire \param_status_out[7]~197 ;
+wire \param_status_out[7]~reg0 ;
+wire \param_status_out[8]~198 ;
+wire \param_status_out[8]~reg0 ;
+wire \param_status_out[9]~199 ;
+wire \param_status_out[9]~reg0 ;
+wire \finished_out~19 ;
+wire \finished_out~reg0 ;
+wire [4:0] bit_counter_r;
+wire [11:0] clk_divider_r;
+wire [23:0] data_r;
+wire [3:0] param_counter_r;
+wire [23:0] rom_data_r;
+
+wire \__ALT_INV__param_counter_r[2] ;
+wire \__ALT_INV__sdat_inout~en ;
+wire \__ALT_INV__rst_n~clkctrl ;
+
+wire gnd;
+wire vcc;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+
+assign \__ALT_INV__param_counter_r[2]  = ~ \param_counter_r[2] ;
+assign \__ALT_INV__sdat_inout~en  = ~ \sdat_inout~en ;
+assign \__ALT_INV__rst_n~clkctrl  = ~ \rst_n~clkctrl ;
+
+cycloneii_lcell_comb \Add0~148_I (
+	.dataa(\clk_divider_r[2] ),
+	.datad(vcc),
+	.cin(\Add0~147 ),
+	.combout(\Add0~148 ),
+	.cout(\Add0~149 ));
+defparam \Add0~148_I .sum_lutc_input = "cin";
+defparam \Add0~148_I .lut_mask = "A50A";
+
+cycloneii_lcell_comb \Add0~152_I (
+	.dataa(\clk_divider_r[4] ),
+	.datad(vcc),
+	.cin(\Add0~151 ),
+	.combout(\Add0~152 ),
+	.cout(\Add0~153 ));
+defparam \Add0~152_I .sum_lutc_input = "cin";
+defparam \Add0~152_I .lut_mask = "A50A";
+
+cycloneii_lcell_comb \Add0~156_I (
+	.datab(\clk_divider_r[6] ),
+	.datad(vcc),
+	.cin(\Add0~155 ),
+	.combout(\Add0~156 ),
+	.cout(\Add0~157 ));
+defparam \Add0~156_I .sum_lutc_input = "cin";
+defparam \Add0~156_I .lut_mask = "C30C";
+
+cycloneii_lcell_comb \Add0~160_I (
+	.dataa(\clk_divider_r[8] ),
+	.datad(vcc),
+	.cin(\Add0~159 ),
+	.combout(\Add0~160 ),
+	.cout(\Add0~161 ));
+defparam \Add0~160_I .sum_lutc_input = "cin";
+defparam \Add0~160_I .lut_mask = "A50A";
+
+cycloneii_lcell_comb \Add1~97_I (
+	.datab(\bit_counter_r[2] ),
+	.datad(vcc),
+	.cin(\Add1~96 ),
+	.combout(\Add1~97 ),
+	.cout(\Add1~98 ));
+defparam \Add1~97_I .sum_lutc_input = "cin";
+defparam \Add1~97_I .lut_mask = "C33F";
+
+cycloneii_lcell_ff \rom_data_r[6]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Decoder0~190 ),
+	.sdata(\param_counter_r[1] ),
+	.sload(\__ALT_INV__param_counter_r[2] ),
+	.ena(rst_n),
+	.regout(\rom_data_r[6] ));
+
+cycloneii_lcell_ff \sclk_en_r~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector0~128 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\Equal1~70 ),
+	.regout(sclk_en_r));
+
+cycloneii_lcell_ff \clk_divider_r[4]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Add0~152 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[4] ));
+
+cycloneii_lcell_comb \Equal0~99_I (
+	.dataa(\clk_divider_r[7] ),
+	.datab(\clk_divider_r[6] ),
+	.datac(\clk_divider_r[4] ),
+	.datad(\clk_divider_r[9] ),
+	.combout(\Equal0~99 ));
+defparam \Equal0~99_I .sum_lutc_input = "datac";
+defparam \Equal0~99_I .lut_mask = "0008";
+
+cycloneii_lcell_comb \Equal1~69_I (
+	.datac(\Equal1~68 ),
+	.datad(\clk_divider_r[0] ),
+	.combout(\Equal1~69 ));
+defparam \Equal1~69_I .sum_lutc_input = "datac";
+defparam \Equal1~69_I .lut_mask = "00F0";
+
+cycloneii_lcell_comb \Decoder0~192_I (
+	.dataa(\param_counter_r[1] ),
+	.datac(\param_counter_r[0] ),
+	.combout(\Decoder0~192 ));
+defparam \Decoder0~192_I .sum_lutc_input = "datac";
+defparam \Decoder0~192_I .lut_mask = "0A0A";
+
+cycloneii_lcell_comb \Selector0~126_I (
+	.datab(\curr_state_r.prep_stop ),
+	.datad(\curr_state_r.prep_start ),
+	.combout(\Selector0~126 ));
+defparam \Selector0~126_I .sum_lutc_input = "datac";
+defparam \Selector0~126_I .lut_mask = "CCFF";
+
+cycloneii_lcell_comb \sdat_inout~75_I (
+	.dataa(\curr_state_r.send_byte ),
+	.datad(\curr_state_r.prep_ack ),
+	.combout(\sdat_inout~75 ));
+defparam \sdat_inout~75_I .sum_lutc_input = "datac";
+defparam \sdat_inout~75_I .lut_mask = "0055";
+
+cycloneii_lcell_comb \Selector0~127_I (
+	.dataa(\curr_state_r.stop ),
+	.datab(\curr_state_r.finished ),
+	.datac(\sdat_inout~75 ),
+	.datad(\curr_state_r.start ),
+	.combout(\Selector0~127 ));
+defparam \Selector0~127_I .sum_lutc_input = "datac";
+defparam \Selector0~127_I .lut_mask = "FFEF";
+
+cycloneii_lcell_comb \Selector0~128_I (
+	.dataa(\Selector0~126 ),
+	.datab(\Selector0~125 ),
+	.datac(sclk_en_r),
+	.datad(\Selector0~127 ),
+	.combout(\Selector0~128 ));
+defparam \Selector0~128_I .sum_lutc_input = "datac";
+defparam \Selector0~128_I .lut_mask = "1011";
+
+cycloneii_lcell_comb \Mux0~263_I (
+	.datab(\bit_counter_r[1] ),
+	.datad(\bit_counter_r[0] ),
+	.combout(\Mux0~263 ));
+defparam \Mux0~263_I .sum_lutc_input = "datac";
+defparam \Mux0~263_I .lut_mask = "CC00";
+
+cycloneii_lcell_comb \i2c_main~17_I (
+	.dataa(\Mux0~263 ),
+	.datab(\bit_counter_r[3] ),
+	.datac(\bit_counter_r[4] ),
+	.datad(\bit_counter_r[2] ),
+	.combout(\i2c_main~17 ));
+defparam \i2c_main~17_I .sum_lutc_input = "datac";
+defparam \i2c_main~17_I .lut_mask = "5DFF";
+
+cycloneii_lcell_comb \curr_state_r.prep_ack~188_I (
+	.datab(sclk_r),
+	.datac(\i2c_main~17 ),
+	.datad(\curr_state_r.send_byte ),
+	.combout(\curr_state_r.prep_ack~188 ));
+defparam \curr_state_r.prep_ack~188_I .sum_lutc_input = "datac";
+defparam \curr_state_r.prep_ack~188_I .lut_mask = "0300";
+
+cycloneii_lcell_ff \data_r[21]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\data_r[21]~feeder ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\data_r[21]~151 ),
+	.regout(\data_r[21] ));
+
+cycloneii_lcell_ff \data_r[6]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\rom_data_r[6] ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.sload(vcc),
+	.ena(\data_r[21]~151 ),
+	.regout(\data_r[6] ));
+
+cycloneii_lcell_ff \data_r[4]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\rom_data_r[4] ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.sload(vcc),
+	.ena(\data_r[21]~151 ),
+	.regout(\data_r[4] ));
+
+cycloneii_lcell_ff \data_r[12]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\rom_data_r[12] ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.sload(vcc),
+	.ena(\data_r[21]~151 ),
+	.regout(\data_r[12] ));
+
+cycloneii_lcell_comb \Selector16~133_I (
+	.datab(\bit_counter_r[3] ),
+	.datac(\data_r[12] ),
+	.datad(\bit_counter_r[1] ),
+	.combout(\Selector16~133 ));
+defparam \Selector16~133_I .sum_lutc_input = "datac";
+defparam \Selector16~133_I .lut_mask = "3FCC";
+
+cycloneii_lcell_ff \data_r[7]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\rom_data_r[7] ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.sload(vcc),
+	.ena(\data_r[21]~151 ),
+	.regout(\data_r[7] ));
+
+cycloneii_lcell_comb \Selector16~134_I (
+	.dataa(\data_r[12] ),
+	.datab(\bit_counter_r[3] ),
+	.datac(\data_r[7] ),
+	.datad(\bit_counter_r[1] ),
+	.combout(\Selector16~134 ));
+defparam \Selector16~134_I .sum_lutc_input = "datac";
+defparam \Selector16~134_I .lut_mask = "44FC";
+
+cycloneii_lcell_comb \Selector16~135_I (
+	.dataa(\Selector16~133 ),
+	.datab(\Selector16~134 ),
+	.datac(\data_r[4] ),
+	.datad(\bit_counter_r[0] ),
+	.combout(\Selector16~135 ));
+defparam \Selector16~135_I .sum_lutc_input = "datac";
+defparam \Selector16~135_I .lut_mask = "7566";
+
+cycloneii_lcell_comb \Selector16~136_I (
+	.dataa(\bit_counter_r[0] ),
+	.datab(\Selector16~135 ),
+	.datac(\data_r[6] ),
+	.datad(\bit_counter_r[1] ),
+	.combout(\Selector16~136 ));
+defparam \Selector16~136_I .sum_lutc_input = "datac";
+defparam \Selector16~136_I .lut_mask = "C8C4";
+
+cycloneii_lcell_ff \data_r[11]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\data_r[11]~feeder ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\data_r[21]~151 ),
+	.regout(\data_r[11] ));
+
+cycloneii_lcell_ff \data_r[0]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\data_r[0]~feeder ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\data_r[21]~151 ),
+	.regout(\data_r[0] ));
+
+cycloneii_lcell_comb \Selector3~176_I (
+	.dataa(\curr_state_r.send_byte ),
+	.datab(sclk_r),
+	.datac(\curr_state_r.prep_start ),
+	.datad(\bit_counter_r[3] ),
+	.combout(\Selector3~176 ));
+defparam \Selector3~176_I .sum_lutc_input = "datac";
+defparam \Selector3~176_I .lut_mask = "D800";
+
+cycloneii_lcell_ff \rom_data_r[4]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Mux3~21 ),
+	.ena(rst_n),
+	.regout(\rom_data_r[4] ));
+
+cycloneii_lcell_ff \rom_data_r[12]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\param_counter_r[3] ),
+	.sload(vcc),
+	.ena(rst_n),
+	.regout(\rom_data_r[12] ));
+
+cycloneii_lcell_ff \rom_data_r[7]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Mux1~13 ),
+	.ena(rst_n),
+	.regout(\rom_data_r[7] ));
+
+cycloneii_lcell_ff \rom_data_r[11]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\param_counter_r[2] ),
+	.sload(vcc),
+	.ena(rst_n),
+	.regout(\rom_data_r[11] ));
+
+cycloneii_lcell_ff \rom_data_r[0]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Mux6~19 ),
+	.ena(rst_n),
+	.regout(\rom_data_r[0] ));
+
+cycloneii_lcell_comb \Mux3~21_I (
+	.dataa(\param_counter_r[2] ),
+	.datab(\param_counter_r[1] ),
+	.datac(\param_counter_r[0] ),
+	.datad(\param_counter_r[3] ),
+	.combout(\Mux3~21 ));
+defparam \Mux3~21_I .sum_lutc_input = "datac";
+defparam \Mux3~21_I .lut_mask = "0057";
+
+cycloneii_lcell_comb \Mux6~19_I (
+	.dataa(\param_counter_r[2] ),
+	.datab(\param_counter_r[1] ),
+	.datac(\param_counter_r[0] ),
+	.datad(\param_counter_r[3] ),
+	.combout(\Mux6~19 ));
+defparam \Mux6~19_I .sum_lutc_input = "datac";
+defparam \Mux6~19_I .lut_mask = "10C4";
+
+cycloneii_lcell_comb \data_r[11]~feeder_I (
+	.datad(\rom_data_r[11] ),
+	.combout(\data_r[11]~feeder ));
+defparam \data_r[11]~feeder_I .sum_lutc_input = "datac";
+defparam \data_r[11]~feeder_I .lut_mask = "FF00";
+
+cycloneii_lcell_comb \data_r[0]~feeder_I (
+	.datad(\rom_data_r[0] ),
+	.combout(\data_r[0]~feeder ));
+defparam \data_r[0]~feeder_I .sum_lutc_input = "datac";
+defparam \data_r[0]~feeder_I .lut_mask = "FF00";
+
+cycloneii_lcell_comb \data_r[21]~feeder_I (
+	.combout(\data_r[21]~feeder ));
+defparam \data_r[21]~feeder_I .sum_lutc_input = "datac";
+defparam \data_r[21]~feeder_I .lut_mask = "FFFF";
+
+cycloneii_io \sdat_inout~I (
+	.datain(\sdat_inout~reg0 ),
+	.oe(\__ALT_INV__sdat_inout~en ),
+	.combout(\sdat_inout~5 ),
+	.padio(sdat_inout));
+defparam \sdat_inout~I .operation_mode = "bidir";
+defparam \sdat_inout~I .input_register_mode = "none";
+defparam \sdat_inout~I .output_register_mode = "none";
+defparam \sdat_inout~I .oe_register_mode = "none";
+defparam \sdat_inout~I .input_async_reset = "none";
+defparam \sdat_inout~I .output_async_reset = "none";
+defparam \sdat_inout~I .oe_async_reset = "none";
+defparam \sdat_inout~I .input_sync_reset = "none";
+defparam \sdat_inout~I .output_sync_reset = "none";
+defparam \sdat_inout~I .oe_sync_reset = "none";
+defparam \sdat_inout~I .input_power_up = "low";
+defparam \sdat_inout~I .output_power_up = "low";
+defparam \sdat_inout~I .oe_power_up = "low";
+
+cycloneii_clkctrl \clk~clkctrl_I (
+	.inclk({clk}),
+	.outclk(\clk~clkctrl ));
+defparam \clk~clkctrl_I .clock_type = "Global Clock";
+defparam \clk~clkctrl_I .ena_register_mode = "falling edge";
+
+cycloneii_lcell_comb \Add0~144_I (
+	.dataa(\clk_divider_r[0] ),
+	.datad(vcc),
+	.combout(\Add0~144 ),
+	.cout(\Add0~145 ));
+defparam \Add0~144_I .sum_lutc_input = "datac";
+defparam \Add0~144_I .lut_mask = "55AA";
+
+cycloneii_lcell_comb \Add0~146_I (
+	.dataa(\clk_divider_r[1] ),
+	.datad(vcc),
+	.cin(\Add0~145 ),
+	.combout(\Add0~146 ),
+	.cout(\Add0~147 ));
+defparam \Add0~146_I .sum_lutc_input = "cin";
+defparam \Add0~146_I .lut_mask = "5A5F";
+
+cycloneii_clkctrl \rst_n~clkctrl_I (
+	.inclk({rst_n}),
+	.outclk(\rst_n~clkctrl ));
+defparam \rst_n~clkctrl_I .clock_type = "Global Clock";
+defparam \rst_n~clkctrl_I .ena_register_mode = "falling edge";
+
+cycloneii_lcell_ff \clk_divider_r[1]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Add0~146 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[1] ));
+
+cycloneii_lcell_comb \Add0~150_I (
+	.datab(\clk_divider_r[3] ),
+	.datad(vcc),
+	.cin(\Add0~149 ),
+	.combout(\Add0~150 ),
+	.cout(\Add0~151 ));
+defparam \Add0~150_I .sum_lutc_input = "cin";
+defparam \Add0~150_I .lut_mask = "3C3F";
+
+cycloneii_lcell_ff \clk_divider_r[3]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Add0~150 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[3] ));
+
+cycloneii_lcell_comb \Add0~154_I (
+	.datab(\clk_divider_r[5] ),
+	.datad(vcc),
+	.cin(\Add0~153 ),
+	.combout(\Add0~154 ),
+	.cout(\Add0~155 ));
+defparam \Add0~154_I .sum_lutc_input = "cin";
+defparam \Add0~154_I .lut_mask = "3C3F";
+
+cycloneii_lcell_ff \clk_divider_r[5]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Add0~154 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[5] ));
+
+cycloneii_lcell_ff \clk_divider_r[0]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Add0~144 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[0] ));
+
+cycloneii_lcell_comb \clk_divider_r~273_I (
+	.dataa(\Add0~156 ),
+	.datab(\Equal0~101 ),
+	.datac(\Equal0~100 ),
+	.datad(\clk_divider_r[0] ),
+	.combout(\clk_divider_r~273 ));
+defparam \clk_divider_r~273_I .sum_lutc_input = "datac";
+defparam \clk_divider_r~273_I .lut_mask = "2AAA";
+
+cycloneii_lcell_ff \clk_divider_r[6]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\clk_divider_r~273 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[6] ));
+
+cycloneii_lcell_comb \Add0~158_I (
+	.datab(\clk_divider_r[7] ),
+	.datad(vcc),
+	.cin(\Add0~157 ),
+	.combout(\Add0~158 ),
+	.cout(\Add0~159 ));
+defparam \Add0~158_I .sum_lutc_input = "cin";
+defparam \Add0~158_I .lut_mask = "3C3F";
+
+cycloneii_lcell_comb \clk_divider_r~272_I (
+	.dataa(\clk_divider_r[0] ),
+	.datab(\Equal0~101 ),
+	.datac(\Equal0~100 ),
+	.datad(\Add0~158 ),
+	.combout(\clk_divider_r~272 ));
+defparam \clk_divider_r~272_I .sum_lutc_input = "datac";
+defparam \clk_divider_r~272_I .lut_mask = "7F00";
+
+cycloneii_lcell_ff \clk_divider_r[7]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\clk_divider_r~272 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[7] ));
+
+cycloneii_lcell_comb \Add0~162_I (
+	.datab(\clk_divider_r[9] ),
+	.datad(vcc),
+	.cin(\Add0~161 ),
+	.combout(\Add0~162 ),
+	.cout(\Add0~163 ));
+defparam \Add0~162_I .sum_lutc_input = "cin";
+defparam \Add0~162_I .lut_mask = "3C3F";
+
+cycloneii_lcell_ff \clk_divider_r[9]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Add0~162 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[9] ));
+
+cycloneii_lcell_comb \Add0~164_I (
+	.datab(\clk_divider_r[10] ),
+	.datad(vcc),
+	.cin(\Add0~163 ),
+	.combout(\Add0~164 ),
+	.cout(\Add0~165 ));
+defparam \Add0~164_I .sum_lutc_input = "cin";
+defparam \Add0~164_I .lut_mask = "C30C";
+
+cycloneii_lcell_ff \clk_divider_r[10]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Add0~164 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[10] ));
+
+cycloneii_lcell_comb \Add0~166_I (
+	.datad(\clk_divider_r[11] ),
+	.cin(\Add0~165 ),
+	.combout(\Add0~166 ));
+defparam \Add0~166_I .sum_lutc_input = "cin";
+defparam \Add0~166_I .lut_mask = "0FF0";
+
+cycloneii_lcell_comb \clk_divider_r~275_I (
+	.dataa(\clk_divider_r[0] ),
+	.datab(\Equal0~100 ),
+	.datac(\Equal0~101 ),
+	.datad(\Add0~166 ),
+	.combout(\clk_divider_r~275 ));
+defparam \clk_divider_r~275_I .sum_lutc_input = "datac";
+defparam \clk_divider_r~275_I .lut_mask = "7F00";
+
+cycloneii_lcell_ff \clk_divider_r[11]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\clk_divider_r~275 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[11] ));
+
+cycloneii_lcell_comb \clk_divider_r~276_I (
+	.dataa(\Add0~160 ),
+	.datab(\Equal0~101 ),
+	.datac(\Equal0~100 ),
+	.datad(\clk_divider_r[0] ),
+	.combout(\clk_divider_r~276 ));
+defparam \clk_divider_r~276_I .sum_lutc_input = "datac";
+defparam \clk_divider_r~276_I .lut_mask = "2AAA";
+
+cycloneii_lcell_ff \clk_divider_r[8]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\clk_divider_r~276 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[8] ));
+
+cycloneii_lcell_comb \Equal0~101_I (
+	.dataa(\clk_divider_r[10] ),
+	.datab(\clk_divider_r[5] ),
+	.datac(\clk_divider_r[11] ),
+	.datad(\clk_divider_r[8] ),
+	.combout(\Equal0~101 ));
+defparam \Equal0~101_I .sum_lutc_input = "datac";
+defparam \Equal0~101_I .lut_mask = "1000";
+
+cycloneii_lcell_comb \clk_divider_r~274_I (
+	.dataa(\Add0~148 ),
+	.datab(\Equal0~101 ),
+	.datac(\Equal0~100 ),
+	.datad(\clk_divider_r[0] ),
+	.combout(\clk_divider_r~274 ));
+defparam \clk_divider_r~274_I .sum_lutc_input = "datac";
+defparam \clk_divider_r~274_I .lut_mask = "2AAA";
+
+cycloneii_lcell_ff \clk_divider_r[2]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\clk_divider_r~274 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\clk_divider_r[2] ));
+
+cycloneii_lcell_comb \Equal0~100_I (
+	.dataa(\Equal0~99 ),
+	.datab(\clk_divider_r[1] ),
+	.datac(\clk_divider_r[3] ),
+	.datad(\clk_divider_r[2] ),
+	.combout(\Equal0~100 ));
+defparam \Equal0~100_I .sum_lutc_input = "datac";
+defparam \Equal0~100_I .lut_mask = "0008";
+
+cycloneii_lcell_comb \Equal0~102_I (
+	.datab(\Equal0~100 ),
+	.datac(\Equal0~101 ),
+	.datad(\clk_divider_r[0] ),
+	.combout(\Equal0~102 ));
+defparam \Equal0~102_I .sum_lutc_input = "datac";
+defparam \Equal0~102_I .lut_mask = "C000";
+
+cycloneii_lcell_comb \Equal1~68_I (
+	.dataa(\clk_divider_r[10] ),
+	.datab(\clk_divider_r[5] ),
+	.datac(\clk_divider_r[11] ),
+	.datad(\clk_divider_r[8] ),
+	.combout(\Equal1~68 ));
+defparam \Equal1~68_I .sum_lutc_input = "datac";
+defparam \Equal1~68_I .lut_mask = "0008";
+
+cycloneii_lcell_comb \param_counter_r[3]~332_I (
+	.dataa(\curr_state_r.stop ),
+	.datab(\Equal1~68 ),
+	.datac(\Equal0~100 ),
+	.datad(\clk_divider_r[0] ),
+	.combout(\param_counter_r[3]~332 ));
+defparam \param_counter_r[3]~332_I .sum_lutc_input = "datac";
+defparam \param_counter_r[3]~332_I .lut_mask = "0080";
+
+cycloneii_lcell_comb \param_counter_r[1]~335_I (
+	.dataa(\param_counter_r[0] ),
+	.datab(\param_counter_r[3]~332 ),
+	.datac(\param_counter_r[1] ),
+	.datad(\Equal5~34 ),
+	.combout(\param_counter_r[1]~335 ));
+defparam \param_counter_r[1]~335_I .sum_lutc_input = "datac";
+defparam \param_counter_r[1]~335_I .lut_mask = "F078";
+
+cycloneii_lcell_ff \param_counter_r[1]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_counter_r[1]~335 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_counter_r[1] ));
+
+cycloneii_lcell_comb \param_counter_r[1]~333_I (
+	.datab(\param_counter_r[3]~332 ),
+	.datac(\param_counter_r[0] ),
+	.datad(\Equal5~33 ),
+	.combout(\param_counter_r[1]~333 ));
+defparam \param_counter_r[1]~333_I .sum_lutc_input = "datac";
+defparam \param_counter_r[1]~333_I .lut_mask = "00C0";
+
+cycloneii_lcell_comb \param_counter_r[3]~334_I (
+	.dataa(\param_counter_r[2] ),
+	.datab(\param_counter_r[1] ),
+	.datac(\param_counter_r[3] ),
+	.datad(\param_counter_r[1]~333 ),
+	.combout(\param_counter_r[3]~334 ));
+defparam \param_counter_r[3]~334_I .sum_lutc_input = "datac";
+defparam \param_counter_r[3]~334_I .lut_mask = "78F0";
+
+cycloneii_lcell_ff \param_counter_r[3]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_counter_r[3]~334 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_counter_r[3] ));
+
+cycloneii_lcell_comb \Equal5~33_I (
+	.dataa(\param_counter_r[2] ),
+	.datab(\param_counter_r[1] ),
+	.datad(\param_counter_r[3] ),
+	.combout(\Equal5~33 ));
+defparam \Equal5~33_I .sum_lutc_input = "datac";
+defparam \Equal5~33_I .lut_mask = "1100";
+
+cycloneii_lcell_comb \param_counter_r[0]~336_I (
+	.datab(\Equal5~33 ),
+	.datac(\param_counter_r[0] ),
+	.datad(\param_counter_r[3]~332 ),
+	.combout(\param_counter_r[0]~336 ));
+defparam \param_counter_r[0]~336_I .sum_lutc_input = "datac";
+defparam \param_counter_r[0]~336_I .lut_mask = "CFF0";
+
+cycloneii_lcell_ff \param_counter_r[0]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_counter_r[0]~336 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_counter_r[0] ));
+
+cycloneii_lcell_comb \Equal5~34_I (
+	.dataa(\param_counter_r[2] ),
+	.datab(\param_counter_r[1] ),
+	.datac(\param_counter_r[0] ),
+	.datad(\param_counter_r[3] ),
+	.combout(\Equal5~34 ));
+defparam \Equal5~34_I .sum_lutc_input = "datac";
+defparam \Equal5~34_I .lut_mask = "1000";
+
+cycloneii_lcell_comb \Equal1~70_I (
+	.datab(\clk_divider_r[0] ),
+	.datac(\Equal1~68 ),
+	.datad(\Equal0~100 ),
+	.combout(\Equal1~70 ));
+defparam \Equal1~70_I .sum_lutc_input = "datac";
+defparam \Equal1~70_I .lut_mask = "3000";
+
+cycloneii_lcell_comb \curr_state_r.prep_ack~189_I (
+	.dataa(\curr_state_r.prep_ack~188 ),
+	.datab(sclk_r),
+	.datac(\curr_state_r.prep_ack ),
+	.datad(\Equal1~70 ),
+	.combout(\curr_state_r.prep_ack~189 ));
+defparam \curr_state_r.prep_ack~189_I .sum_lutc_input = "datac";
+defparam \curr_state_r.prep_ack~189_I .lut_mask = "EAF0";
+
+cycloneii_lcell_ff \curr_state_r.prep_ack~I (
+	.clk(\clk~clkctrl ),
+	.datain(\curr_state_r.prep_ack~189 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\curr_state_r.prep_ack ));
+
+cycloneii_lcell_comb \Selector11~15_I (
+	.datac(\curr_state_r.prep_ack ),
+	.datad(sclk_r),
+	.combout(\Selector11~15 ));
+defparam \Selector11~15_I .sum_lutc_input = "datac";
+defparam \Selector11~15_I .lut_mask = "00F0";
+
+cycloneii_lcell_ff \curr_state_r.read_ack~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector11~15 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\Equal1~70 ),
+	.regout(\curr_state_r.read_ack ));
+
+cycloneii_lcell_comb \Selector7~56_I (
+	.dataa(\curr_state_r.stop ),
+	.datab(\sdat_inout~5 ),
+	.datac(\Equal5~34 ),
+	.datad(\curr_state_r.read_ack ),
+	.combout(\Selector7~56 ));
+defparam \Selector7~56_I .sum_lutc_input = "datac";
+defparam \Selector7~56_I .lut_mask = "31F5";
+
+cycloneii_lcell_ff \curr_state_r.prep_start~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector7~56 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\Equal1~70 ),
+	.regout(\curr_state_r.prep_start ));
+
+cycloneii_lcell_comb \curr_state_r.start~18_I (
+	.datac(\curr_state_r.prep_start ),
+	.combout(\curr_state_r.start~18 ));
+defparam \curr_state_r.start~18_I .sum_lutc_input = "datac";
+defparam \curr_state_r.start~18_I .lut_mask = "0F0F";
+
+cycloneii_lcell_ff \curr_state_r.start~I (
+	.clk(\clk~clkctrl ),
+	.datain(\curr_state_r.start~18 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\Equal1~70 ),
+	.regout(\curr_state_r.start ));
+
+cycloneii_lcell_comb \Selector9~131_I (
+	.dataa(\curr_state_r.read_ack ),
+	.datab(\Equal4~37 ),
+	.datac(\curr_state_r.start ),
+	.datad(\sdat_inout~5 ),
+	.combout(\Selector9~131 ));
+defparam \Selector9~131_I .sum_lutc_input = "datac";
+defparam \Selector9~131_I .lut_mask = "F0F2";
+
+cycloneii_lcell_comb \Selector9~132_I (
+	.dataa(\i2c_main~17 ),
+	.datab(sclk_r),
+	.datac(\curr_state_r.send_byte ),
+	.datad(\Selector9~131 ),
+	.combout(\Selector9~132 ));
+defparam \Selector9~132_I .sum_lutc_input = "datac";
+defparam \Selector9~132_I .lut_mask = "FFE0";
+
+cycloneii_lcell_ff \curr_state_r.send_byte~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector9~132 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\Equal1~70 ),
+	.regout(\curr_state_r.send_byte ));
+
+cycloneii_lcell_comb \Selector1~46_I (
+	.dataa(\sdat_inout~76 ),
+	.datab(sclk_r),
+	.datac(\curr_state_r.send_byte ),
+	.datad(\curr_state_r.prep_ack ),
+	.combout(\Selector1~46 ));
+defparam \Selector1~46_I .sum_lutc_input = "datac";
+defparam \Selector1~46_I .lut_mask = "FFD5";
+
+cycloneii_lcell_comb \Selector1~47_I (
+	.dataa(\curr_state_r.prep_stop ),
+	.datab(\Selector16~131 ),
+	.datac(sclk_force_r),
+	.datad(\Selector1~46 ),
+	.combout(\Selector1~47 ));
+defparam \Selector1~47_I .sum_lutc_input = "datac";
+defparam \Selector1~47_I .lut_mask = "4044";
+
+cycloneii_lcell_ff \sclk_force_r~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector1~47 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\Equal1~70 ),
+	.regout(sclk_force_r));
+
+cycloneii_lcell_comb \sclk_r~186_I (
+	.dataa(sclk_en_r),
+	.datab(\Equal0~102 ),
+	.datac(sclk_r),
+	.datad(sclk_force_r),
+	.combout(\sclk_r~186 ));
+defparam \sclk_r~186_I .sum_lutc_input = "datac";
+defparam \sclk_r~186_I .lut_mask = "34FC";
+
+cycloneii_lcell_ff \sclk_r~I (
+	.clk(\clk~clkctrl ),
+	.datain(\sclk_r~186 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(sclk_r));
+
+cycloneii_lcell_comb \Selector0~125_I (
+	.datab(sclk_r),
+	.datad(\curr_state_r.send_byte ),
+	.combout(\Selector0~125 ));
+defparam \Selector0~125_I .sum_lutc_input = "datac";
+defparam \Selector0~125_I .lut_mask = "3300";
+
+cycloneii_lcell_comb \Selector4~7_I (
+	.dataa(\Add1~97 ),
+	.datad(\curr_state_r.send_byte ),
+	.combout(\Selector4~7 ));
+defparam \Selector4~7_I .sum_lutc_input = "datac";
+defparam \Selector4~7_I .lut_mask = "5500";
+
+cycloneii_lcell_comb \bit_counter_r[2]~250_I (
+	.datab(sclk_r),
+	.datac(\Equal4~37 ),
+	.combout(\bit_counter_r[2]~250 ));
+defparam \bit_counter_r[2]~250_I .sum_lutc_input = "datac";
+defparam \bit_counter_r[2]~250_I .lut_mask = "FCFC";
+
+cycloneii_lcell_comb \bit_counter_r[2]~251_I (
+	.dataa(\curr_state_r.send_byte ),
+	.datab(\Equal1~70 ),
+	.datac(\curr_state_r.prep_start ),
+	.datad(\bit_counter_r[2]~250 ),
+	.combout(\bit_counter_r[2]~251 ));
+defparam \bit_counter_r[2]~251_I .sum_lutc_input = "datac";
+defparam \bit_counter_r[2]~251_I .lut_mask = "048C";
+
+cycloneii_lcell_ff \bit_counter_r[2]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector4~7 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\bit_counter_r[2]~251 ),
+	.regout(\bit_counter_r[2] ));
+
+cycloneii_lcell_comb \Add1~93_I (
+	.datab(\bit_counter_r[0] ),
+	.datad(vcc),
+	.combout(\Add1~93 ),
+	.cout(\Add1~94 ));
+defparam \Add1~93_I .sum_lutc_input = "datac";
+defparam \Add1~93_I .lut_mask = "CC33";
+
+cycloneii_lcell_comb \Selector6~7_I (
+	.datab(\curr_state_r.send_byte ),
+	.datad(\Add1~93 ),
+	.combout(\Selector6~7 ));
+defparam \Selector6~7_I .sum_lutc_input = "datac";
+defparam \Selector6~7_I .lut_mask = "00CC";
+
+cycloneii_lcell_ff \bit_counter_r[0]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector6~7 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\bit_counter_r[2]~251 ),
+	.regout(\bit_counter_r[0] ));
+
+cycloneii_lcell_comb \Add1~95_I (
+	.datab(\bit_counter_r[1] ),
+	.datad(vcc),
+	.cin(\Add1~94 ),
+	.combout(\Add1~95 ),
+	.cout(\Add1~96 ));
+defparam \Add1~95_I .sum_lutc_input = "cin";
+defparam \Add1~95_I .lut_mask = "3C0C";
+
+cycloneii_lcell_comb \Selector5~7_I (
+	.datac(\Add1~95 ),
+	.datad(\curr_state_r.send_byte ),
+	.combout(\Selector5~7 ));
+defparam \Selector5~7_I .sum_lutc_input = "datac";
+defparam \Selector5~7_I .lut_mask = "0F00";
+
+cycloneii_lcell_ff \bit_counter_r[1]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector5~7 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\bit_counter_r[2]~251 ),
+	.regout(\bit_counter_r[1] ));
+
+cycloneii_lcell_comb \Add1~99_I (
+	.datab(\bit_counter_r[3] ),
+	.datad(vcc),
+	.cin(\Add1~98 ),
+	.combout(\Add1~99 ),
+	.cout(\Add1~100 ));
+defparam \Add1~99_I .sum_lutc_input = "cin";
+defparam \Add1~99_I .lut_mask = "C303";
+
+cycloneii_lcell_comb \Selector3~177_I (
+	.dataa(\Selector3~176 ),
+	.datab(\Selector0~125 ),
+	.datac(\Add1~99 ),
+	.datad(\Equal4~37 ),
+	.combout(\Selector3~177 ));
+defparam \Selector3~177_I .sum_lutc_input = "datac";
+defparam \Selector3~177_I .lut_mask = "AAEA";
+
+cycloneii_lcell_ff \bit_counter_r[3]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector3~177 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\Equal1~70 ),
+	.regout(\bit_counter_r[3] ));
+
+cycloneii_lcell_comb \Add1~101_I (
+	.dataa(\bit_counter_r[4] ),
+	.cin(\Add1~100 ),
+	.combout(\Add1~101 ));
+defparam \Add1~101_I .sum_lutc_input = "cin";
+defparam \Add1~101_I .lut_mask = "A5A5";
+
+cycloneii_lcell_comb \Selector2~7_I (
+	.datac(\Add1~101 ),
+	.datad(\curr_state_r.send_byte ),
+	.combout(\Selector2~7 ));
+defparam \Selector2~7_I .sum_lutc_input = "datac";
+defparam \Selector2~7_I .lut_mask = "0F00";
+
+cycloneii_lcell_ff \bit_counter_r[4]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector2~7 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\bit_counter_r[2]~251 ),
+	.regout(\bit_counter_r[4] ));
+
+cycloneii_lcell_comb \Equal4~37_I (
+	.dataa(\Mux0~263 ),
+	.datab(\bit_counter_r[3] ),
+	.datac(\bit_counter_r[4] ),
+	.datad(\bit_counter_r[2] ),
+	.combout(\Equal4~37 ));
+defparam \Equal4~37_I .sum_lutc_input = "datac";
+defparam \Equal4~37_I .lut_mask = "2000";
+
+cycloneii_lcell_comb \Selector12~18_I (
+	.dataa(\curr_state_r.read_ack ),
+	.datab(\Equal4~37 ),
+	.datad(\sdat_inout~5 ),
+	.combout(\Selector12~18 ));
+defparam \Selector12~18_I .sum_lutc_input = "datac";
+defparam \Selector12~18_I .lut_mask = "0088";
+
+cycloneii_lcell_ff \curr_state_r.prep_stop~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector12~18 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\Equal1~70 ),
+	.regout(\curr_state_r.prep_stop ));
+
+cycloneii_lcell_ff \curr_state_r.stop~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\curr_state_r.prep_stop ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.sload(vcc),
+	.ena(\Equal1~70 ),
+	.regout(\curr_state_r.stop ));
+
+cycloneii_lcell_comb \Selector16~131_I (
+	.dataa(\curr_state_r.prep_start ),
+	.datac(\curr_state_r.stop ),
+	.combout(\Selector16~131 ));
+defparam \Selector16~131_I .sum_lutc_input = "datac";
+defparam \Selector16~131_I .lut_mask = "0A0A";
+
+cycloneii_lcell_comb \Mux0~264_I (
+	.dataa(\bit_counter_r[3] ),
+	.datab(\bit_counter_r[2] ),
+	.datac(\bit_counter_r[0] ),
+	.datad(\bit_counter_r[1] ),
+	.combout(\Mux0~264 ));
+defparam \Mux0~264_I .sum_lutc_input = "datac";
+defparam \Mux0~264_I .lut_mask = "1140";
+
+cycloneii_lcell_comb \Selector16~132_I (
+	.dataa(\data_r[21] ),
+	.datab(\bit_counter_r[4] ),
+	.datac(\curr_state_r.send_byte ),
+	.datad(\Mux0~264 ),
+	.combout(\Selector16~132 ));
+defparam \Selector16~132_I .sum_lutc_input = "datac";
+defparam \Selector16~132_I .lut_mask = "2000";
+
+cycloneii_lcell_ff \rom_data_r[10]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\param_counter_r[1] ),
+	.sload(vcc),
+	.ena(rst_n),
+	.regout(\rom_data_r[10] ));
+
+cycloneii_lcell_comb \data_r[21]~151_I (
+	.dataa(\curr_state_r.start ),
+	.datab(\Equal1~68 ),
+	.datac(\Equal0~100 ),
+	.datad(\clk_divider_r[0] ),
+	.combout(\data_r[21]~151 ));
+defparam \data_r[21]~151_I .sum_lutc_input = "datac";
+defparam \data_r[21]~151_I .lut_mask = "0080";
+
+cycloneii_lcell_ff \data_r[10]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\rom_data_r[10] ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.sload(vcc),
+	.ena(\data_r[21]~151 ),
+	.regout(\data_r[10] ));
+
+cycloneii_lcell_comb \Selector16~138_I (
+	.datac(\data_r[10] ),
+	.datad(\bit_counter_r[0] ),
+	.combout(\Selector16~138 ));
+defparam \Selector16~138_I .sum_lutc_input = "datac";
+defparam \Selector16~138_I .lut_mask = "F0FF";
+
+cycloneii_lcell_comb \Mux4~11_I (
+	.dataa(\param_counter_r[2] ),
+	.datac(\param_counter_r[0] ),
+	.datad(\param_counter_r[1] ),
+	.combout(\Mux4~11 ));
+defparam \Mux4~11_I .sum_lutc_input = "datac";
+defparam \Mux4~11_I .lut_mask = "00A0";
+
+cycloneii_lcell_ff \rom_data_r[2]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Mux4~11 ),
+	.ena(rst_n),
+	.regout(\rom_data_r[2] ));
+
+cycloneii_lcell_ff \data_r[2]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\rom_data_r[2] ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.sload(vcc),
+	.ena(\data_r[21]~151 ),
+	.regout(\data_r[2] ));
+
+cycloneii_lcell_comb \Selector16~139_I (
+	.dataa(\data_r[4] ),
+	.datab(\bit_counter_r[1] ),
+	.datac(\data_r[2] ),
+	.datad(\bit_counter_r[0] ),
+	.combout(\Selector16~139 ));
+defparam \Selector16~139_I .sum_lutc_input = "datac";
+defparam \Selector16~139_I .lut_mask = "FC22";
+
+cycloneii_lcell_comb \Mux5~23_I (
+	.dataa(\param_counter_r[2] ),
+	.datab(\param_counter_r[1] ),
+	.datac(\param_counter_r[0] ),
+	.datad(\param_counter_r[3] ),
+	.combout(\Mux5~23 ));
+defparam \Mux5~23_I .sum_lutc_input = "datac";
+defparam \Mux5~23_I .lut_mask = "0175";
+
+cycloneii_lcell_ff \rom_data_r[1]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\Mux5~23 ),
+	.ena(rst_n),
+	.regout(\rom_data_r[1] ));
+
+cycloneii_lcell_ff \data_r[1]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\rom_data_r[1] ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.sload(vcc),
+	.ena(\data_r[21]~151 ),
+	.regout(\data_r[1] ));
+
+cycloneii_lcell_comb \Selector16~140_I (
+	.dataa(\data_r[0] ),
+	.datab(\Selector16~139 ),
+	.datac(\data_r[1] ),
+	.datad(\bit_counter_r[1] ),
+	.combout(\Selector16~140 ));
+defparam \Selector16~140_I .sum_lutc_input = "datac";
+defparam \Selector16~140_I .lut_mask = "B8CC";
+
+cycloneii_lcell_ff \rom_data_r[9]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\param_counter_r[0] ),
+	.sload(vcc),
+	.ena(rst_n),
+	.regout(\rom_data_r[9] ));
+
+cycloneii_lcell_ff \data_r[9]~I (
+	.clk(\clk~clkctrl ),
+	.sdata(\rom_data_r[9] ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.sload(vcc),
+	.ena(\data_r[21]~151 ),
+	.regout(\data_r[9] ));
+
+cycloneii_lcell_comb \Selector16~137_I (
+	.dataa(\data_r[11] ),
+	.datab(\bit_counter_r[1] ),
+	.datac(\data_r[9] ),
+	.datad(\bit_counter_r[0] ),
+	.combout(\Selector16~137 ));
+defparam \Selector16~137_I .sum_lutc_input = "datac";
+defparam \Selector16~137_I .lut_mask = "33E2";
+
+cycloneii_lcell_comb \Selector16~141_I (
+	.dataa(\bit_counter_r[3] ),
+	.datab(\Selector16~138 ),
+	.datac(\Selector16~140 ),
+	.datad(\Selector16~137 ),
+	.combout(\Selector16~141 ));
+defparam \Selector16~141_I .sum_lutc_input = "datac";
+defparam \Selector16~141_I .lut_mask = "D850";
+
+cycloneii_lcell_comb \Selector16~142_I (
+	.dataa(\Selector16~136 ),
+	.datab(\bit_counter_r[2] ),
+	.datac(\Selector16~141 ),
+	.datad(\bit_counter_r[4] ),
+	.combout(\Selector16~142 ));
+defparam \Selector16~142_I .sum_lutc_input = "datac";
+defparam \Selector16~142_I .lut_mask = "E200";
+
+cycloneii_lcell_comb \Selector16~143_I (
+	.dataa(\curr_state_r.send_byte ),
+	.datab(\Selector16~131 ),
+	.datac(\Selector16~132 ),
+	.datad(\Selector16~142 ),
+	.combout(\Selector16~143 ));
+defparam \Selector16~143_I .sum_lutc_input = "datac";
+defparam \Selector16~143_I .lut_mask = "FBF3";
+
+cycloneii_lcell_comb \curr_state_r.finished~28_I (
+	.datab(\param_counter_r[3]~332 ),
+	.datac(\curr_state_r.finished ),
+	.datad(\Equal5~34 ),
+	.combout(\curr_state_r.finished~28 ));
+defparam \curr_state_r.finished~28_I .sum_lutc_input = "datac";
+defparam \curr_state_r.finished~28_I .lut_mask = "FCF0";
+
+cycloneii_lcell_ff \curr_state_r.finished~I (
+	.clk(\clk~clkctrl ),
+	.datain(\curr_state_r.finished~28 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\curr_state_r.finished ));
+
+cycloneii_lcell_comb \sdat_inout~76_I (
+	.datab(\curr_state_r.finished ),
+	.datad(\curr_state_r.read_ack ),
+	.combout(\sdat_inout~76 ));
+defparam \sdat_inout~76_I .sum_lutc_input = "datac";
+defparam \sdat_inout~76_I .lut_mask = "0033";
+
+cycloneii_lcell_comb \sdat_inout~77_I (
+	.dataa(\sdat_inout~75 ),
+	.datab(sclk_r),
+	.datac(\Equal1~70 ),
+	.datad(\sdat_inout~76 ),
+	.combout(\sdat_inout~77 ));
+defparam \sdat_inout~77_I .sum_lutc_input = "datac";
+defparam \sdat_inout~77_I .lut_mask = "B000";
+
+cycloneii_lcell_ff \sdat_inout~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\Selector16~143 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\sdat_inout~77 ),
+	.regout(\sdat_inout~reg0 ));
+
+cycloneii_lcell_comb \sdat_inout~enfeeder_I (
+	.datad(\curr_state_r.prep_ack ),
+	.combout(\sdat_inout~enfeeder ));
+defparam \sdat_inout~enfeeder_I .sum_lutc_input = "datac";
+defparam \sdat_inout~enfeeder_I .lut_mask = "FF00";
+
+cycloneii_lcell_ff \sdat_inout~en_I (
+	.clk(\clk~clkctrl ),
+	.datain(\sdat_inout~enfeeder ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.ena(\sdat_inout~77 ),
+	.regout(\sdat_inout~en ));
+
+cycloneii_lcell_comb \Decoder0~190_I (
+	.dataa(\param_counter_r[0] ),
+	.datac(\param_counter_r[1] ),
+	.combout(\Decoder0~190 ));
+defparam \Decoder0~190_I .sum_lutc_input = "datac";
+defparam \Decoder0~190_I .lut_mask = "0505";
+
+cycloneii_lcell_comb \Decoder0~189_I (
+	.dataa(\Equal1~69 ),
+	.datab(\Equal0~100 ),
+	.datac(\curr_state_r.stop ),
+	.datad(\param_counter_r[3] ),
+	.combout(\Decoder0~189 ));
+defparam \Decoder0~189_I .sum_lutc_input = "datac";
+defparam \Decoder0~189_I .lut_mask = "0080";
+
+cycloneii_lcell_comb \param_status_out[0]~190_I (
+	.dataa(\param_counter_r[2] ),
+	.datab(\Decoder0~190 ),
+	.datac(\param_status_out[0]~reg0 ),
+	.datad(\Decoder0~189 ),
+	.combout(\param_status_out[0]~190 ));
+defparam \param_status_out[0]~190_I .sum_lutc_input = "datac";
+defparam \param_status_out[0]~190_I .lut_mask = "F4F0";
+
+cycloneii_lcell_ff \param_status_out[0]~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_status_out[0]~190 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_status_out[0]~reg0 ));
+
+cycloneii_lcell_comb \Decoder0~191_I (
+	.dataa(\param_counter_r[2] ),
+	.datad(\Decoder0~189 ),
+	.combout(\Decoder0~191 ));
+defparam \Decoder0~191_I .sum_lutc_input = "datac";
+defparam \Decoder0~191_I .lut_mask = "5500";
+
+cycloneii_lcell_comb \param_status_out[1]~191_I (
+	.dataa(\param_counter_r[0] ),
+	.datab(\Decoder0~191 ),
+	.datac(\param_status_out[1]~reg0 ),
+	.datad(\param_counter_r[1] ),
+	.combout(\param_status_out[1]~191 ));
+defparam \param_status_out[1]~191_I .sum_lutc_input = "datac";
+defparam \param_status_out[1]~191_I .lut_mask = "F0F8";
+
+cycloneii_lcell_ff \param_status_out[1]~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_status_out[1]~191 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_status_out[1]~reg0 ));
+
+cycloneii_lcell_comb \param_counter_r[2]~337_I (
+	.dataa(\param_counter_r[1] ),
+	.datac(\param_counter_r[2] ),
+	.datad(\param_counter_r[1]~333 ),
+	.combout(\param_counter_r[2]~337 ));
+defparam \param_counter_r[2]~337_I .sum_lutc_input = "datac";
+defparam \param_counter_r[2]~337_I .lut_mask = "5AF0";
+
+cycloneii_lcell_ff \param_counter_r[2]~I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_counter_r[2]~337 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_counter_r[2] ));
+
+cycloneii_lcell_comb \param_status_out[2]~192_I (
+	.dataa(\Decoder0~192 ),
+	.datab(\param_counter_r[2] ),
+	.datac(\param_status_out[2]~reg0 ),
+	.datad(\Decoder0~189 ),
+	.combout(\param_status_out[2]~192 ));
+defparam \param_status_out[2]~192_I .sum_lutc_input = "datac";
+defparam \param_status_out[2]~192_I .lut_mask = "F2F0";
+
+cycloneii_lcell_ff \param_status_out[2]~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_status_out[2]~192 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_status_out[2]~reg0 ));
+
+cycloneii_lcell_comb \param_status_out[3]~193_I (
+	.dataa(\param_counter_r[0] ),
+	.datab(\Decoder0~191 ),
+	.datac(\param_status_out[3]~reg0 ),
+	.datad(\param_counter_r[1] ),
+	.combout(\param_status_out[3]~193 ));
+defparam \param_status_out[3]~193_I .sum_lutc_input = "datac";
+defparam \param_status_out[3]~193_I .lut_mask = "F8F0";
+
+cycloneii_lcell_ff \param_status_out[3]~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_status_out[3]~193 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_status_out[3]~reg0 ));
+
+cycloneii_lcell_comb \Mux1~13_I (
+	.dataa(\param_counter_r[2] ),
+	.datac(\param_counter_r[0] ),
+	.datad(\param_counter_r[1] ),
+	.combout(\Mux1~13 ));
+defparam \Mux1~13_I .sum_lutc_input = "datac";
+defparam \Mux1~13_I .lut_mask = "000A";
+
+cycloneii_lcell_comb \param_status_out[4]~194_I (
+	.datab(\Mux1~13 ),
+	.datac(\param_status_out[4]~reg0 ),
+	.datad(\Decoder0~189 ),
+	.combout(\param_status_out[4]~194 ));
+defparam \param_status_out[4]~194_I .sum_lutc_input = "datac";
+defparam \param_status_out[4]~194_I .lut_mask = "FCF0";
+
+cycloneii_lcell_ff \param_status_out[4]~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_status_out[4]~194 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_status_out[4]~reg0 ));
+
+cycloneii_lcell_comb \Decoder0~193_I (
+	.datac(\param_counter_r[0] ),
+	.datad(\Decoder0~189 ),
+	.combout(\Decoder0~193 ));
+defparam \Decoder0~193_I .sum_lutc_input = "datac";
+defparam \Decoder0~193_I .lut_mask = "F000";
+
+cycloneii_lcell_comb \param_status_out[5]~195_I (
+	.dataa(\param_counter_r[1] ),
+	.datab(\Decoder0~193 ),
+	.datac(\param_status_out[5]~reg0 ),
+	.datad(\param_counter_r[2] ),
+	.combout(\param_status_out[5]~195 ));
+defparam \param_status_out[5]~195_I .sum_lutc_input = "datac";
+defparam \param_status_out[5]~195_I .lut_mask = "F4F0";
+
+cycloneii_lcell_ff \param_status_out[5]~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_status_out[5]~195 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_status_out[5]~reg0 ));
+
+cycloneii_lcell_comb \param_status_out[6]~196_I (
+	.dataa(\Decoder0~192 ),
+	.datab(\param_counter_r[2] ),
+	.datac(\param_status_out[6]~reg0 ),
+	.datad(\Decoder0~189 ),
+	.combout(\param_status_out[6]~196 ));
+defparam \param_status_out[6]~196_I .sum_lutc_input = "datac";
+defparam \param_status_out[6]~196_I .lut_mask = "F8F0";
+
+cycloneii_lcell_ff \param_status_out[6]~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_status_out[6]~196 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_status_out[6]~reg0 ));
+
+cycloneii_lcell_comb \param_status_out[7]~197_I (
+	.dataa(\param_counter_r[1] ),
+	.datab(\Decoder0~193 ),
+	.datac(\param_status_out[7]~reg0 ),
+	.datad(\param_counter_r[2] ),
+	.combout(\param_status_out[7]~197 ));
+defparam \param_status_out[7]~197_I .sum_lutc_input = "datac";
+defparam \param_status_out[7]~197_I .lut_mask = "F8F0";
+
+cycloneii_lcell_ff \param_status_out[7]~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_status_out[7]~197 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_status_out[7]~reg0 ));
+
+cycloneii_lcell_comb \param_status_out[8]~198_I (
+	.dataa(\param_counter_r[0] ),
+	.datab(\Equal5~33 ),
+	.datac(\param_status_out[8]~reg0 ),
+	.datad(\param_counter_r[3]~332 ),
+	.combout(\param_status_out[8]~198 ));
+defparam \param_status_out[8]~198_I .sum_lutc_input = "datac";
+defparam \param_status_out[8]~198_I .lut_mask = "F4F0";
+
+cycloneii_lcell_ff \param_status_out[8]~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_status_out[8]~198 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_status_out[8]~reg0 ));
+
+cycloneii_lcell_comb \param_status_out[9]~199_I (
+	.datab(\param_counter_r[3]~332 ),
+	.datac(\param_status_out[9]~reg0 ),
+	.datad(\Equal5~34 ),
+	.combout(\param_status_out[9]~199 ));
+defparam \param_status_out[9]~199_I .sum_lutc_input = "datac";
+defparam \param_status_out[9]~199_I .lut_mask = "FCF0";
+
+cycloneii_lcell_ff \param_status_out[9]~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\param_status_out[9]~199 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\param_status_out[9]~reg0 ));
+
+cycloneii_lcell_comb \finished_out~19_I (
+	.dataa(\Equal1~69 ),
+	.datab(\Equal0~100 ),
+	.datac(\finished_out~reg0 ),
+	.datad(\curr_state_r.finished ),
+	.combout(\finished_out~19 ));
+defparam \finished_out~19_I .sum_lutc_input = "datac";
+defparam \finished_out~19_I .lut_mask = "F8F0";
+
+cycloneii_lcell_ff \finished_out~reg0_I (
+	.clk(\clk~clkctrl ),
+	.datain(\finished_out~19 ),
+	.aclr(\__ALT_INV__rst_n~clkctrl ),
+	.regout(\finished_out~reg0 ));
+
+assign sclk_out = sclk_r;
+
+assign param_status_out[0] = \param_status_out[0]~reg0 ;
+
+assign param_status_out[1] = \param_status_out[1]~reg0 ;
+
+assign param_status_out[2] = \param_status_out[2]~reg0 ;
+
+assign param_status_out[3] = \param_status_out[3]~reg0 ;
+
+assign param_status_out[4] = \param_status_out[4]~reg0 ;
+
+assign param_status_out[5] = \param_status_out[5]~reg0 ;
+
+assign param_status_out[6] = \param_status_out[6]~reg0 ;
+
+assign param_status_out[7] = \param_status_out[7]~reg0 ;
+
+assign param_status_out[8] = \param_status_out[8]~reg0 ;
+
+assign param_status_out[9] = \param_status_out[9]~reg0 ;
+
+assign finished_out = \finished_out~reg0 ;
+
+endmodule

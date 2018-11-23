@@ -1,0 +1,705 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/kazooie/fpga_projects/logic_synthesis/workspace/sim
+Eadder
+Z1 w1525433537
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8../vhd/adder.vhd
+Z6 F../vhd/adder.vhd
+l0
+L17
+Vj>H7daTIzH4_nGVJji8ZT0
+!s100 3m26O_[WVNUfhzU]a?BOQ0
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1525950909
+!i10b 1
+Z9 !s108 1525950909.000000
+Z10 !s90 -quiet|-check_synthesis|../vhd/adder.vhd|
+Z11 !s107 ../vhd/adder.vhd|
+!i113 1
+Z12 o-quiet -check_synthesis
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+DEx4 work 5 adder 0 22 j>H7daTIzH4_nGVJji8ZT0
+l36
+L30
+Vi@3_7Xd<Wdc[lj<fim6SM2
+!s100 FmFQGA6ejFRJ6i0>JNDc;2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eaudio_codec_model
+Z14 w1521628274
+R3
+R4
+R0
+Z15 8../vhd/audio_codec_model.vhd
+Z16 F../vhd/audio_codec_model.vhd
+l0
+L26
+V?fKJZdEbQ6>9OeFYgQDGZ2
+!s100 VE=ja[gLKPo=bN]kEl_J<0
+R7
+30
+Z17 !s110 1525950910
+!i10b 1
+R9
+Z18 !s90 -quiet|-check_synthesis|-87|../vhd/audio_codec_model.vhd|
+Z19 !s107 ../vhd/audio_codec_model.vhd|
+!i113 1
+Z20 o-quiet -check_synthesis -87
+R13
+Artl
+R3
+R4
+DEx4 work 17 audio_codec_model 0 22 ?fKJZdEbQ6>9OeFYgQDGZ2
+l55
+L41
+V2aVn_@K7?UF@_^`[T_h0Y0
+!s100 =5jCB]<>cH1]M;zNMKmND3
+R7
+30
+R17
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R20
+R13
+Eaudio_ctrl
+R14
+Z21 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+R3
+R4
+R0
+Z22 8../vhd/audio_ctrl.vhd
+Z23 F../vhd/audio_ctrl.vhd
+l0
+L38
+V7ZBTnzfZ1?2gbakfIYRBn2
+!s100 [[DzbMlL3J[1f<a=S1V<O0
+R7
+30
+R8
+!i10b 1
+R9
+Z24 !s90 -quiet|-check_synthesis|-87|../vhd/audio_ctrl.vhd|
+Z25 !s107 ../vhd/audio_ctrl.vhd|
+!i113 1
+R20
+R13
+Artl
+R21
+R3
+R4
+DEx4 work 10 audio_ctrl 0 22 7ZBTnzfZ1?2gbakfIYRBn2
+l112
+L56
+Ve60Y>IH]EXNU@3e?Plh4G1
+!s100 z>XL>bW^c2O8=Fg1nX9UN0
+R7
+30
+R8
+!i10b 1
+R9
+R24
+R25
+!i113 1
+R20
+R13
+Ei2c_config
+R14
+R21
+R2
+R3
+R4
+R0
+Z26 8../vhd/i2c_config.vhd
+Z27 F../vhd/i2c_config.vhd
+l0
+L28
+V2e0ZVR2eho@XS?Wf5]f4D0
+!s100 CGmizEg;afP`o;U`[o^F33
+R7
+30
+R17
+!i10b 1
+Z28 !s108 1525950910.000000
+Z29 !s90 -quiet|-check_synthesis|-87|-cover|sbf|../vhd/i2c_config.vhd|
+Z30 !s107 ../vhd/i2c_config.vhd|
+!i113 1
+Z31 !s102 -cover sbf
+Z32 o-quiet -check_synthesis -87 -cover sbf
+R13
+Artl
+R21
+R2
+R3
+R4
+DEx4 work 10 i2c_config 0 22 2e0ZVR2eho@XS?Wf5]f4D0
+l140
+L49
+V>CW:k:az6ac?8=?87HMfI1
+!s100 bKajYal@J2bWJNLS7Dc170
+R7
+30
+R17
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R31
+R32
+R13
+Emulti_port_adder
+R14
+R3
+R4
+R0
+Z33 8../vhd/multi_port_adder.vhd
+Z34 F../vhd/multi_port_adder.vhd
+l0
+L18
+V>i>ei5O0RW:f8m6d5_MNA2
+!s100 8RJPaWT<oo0>GFMQobZc_2
+R7
+32
+R8
+!i10b 1
+R9
+Z35 !s90 -quiet|-check_synthesis|../vhd/multi_port_adder.vhd|
+Z36 !s107 ../vhd/multi_port_adder.vhd|
+!i113 1
+R12
+R13
+Astructural
+R3
+R4
+DEx4 work 16 multi_port_adder 0 22 >i>ei5O0RW:f8m6d5_MNA2
+l74
+L34
+VS9lEGP9D?a<H<F8_AmzGW3
+!s100 7eGAPLDmOD6IOh<K>4[BK3
+R7
+32
+R8
+!i10b 1
+R9
+R35
+R36
+!i113 1
+R12
+R13
+Epiano
+Z37 w1519460332
+R3
+R4
+R0
+Z38 8../vhd/piano.vhd
+Z39 F../vhd/piano.vhd
+l0
+L19
+Vj2@>GT3VbUg5CJWG]`1T_3
+!s100 0Sd0O4Fc?oU]EC<>I7bQQ0
+R7
+30
+R17
+!i10b 1
+R28
+Z40 !s90 -quiet|-check_synthesis|-87|../vhd/piano.vhd|
+Z41 !s107 ../vhd/piano.vhd|
+!i113 1
+R20
+R13
+Artl
+R3
+R4
+DEx4 work 5 piano 0 22 j2@>GT3VbUg5CJWG]`1T_3
+l68
+L34
+VMRVbVoIkMn]D;maN?M2173
+!s100 oiH35M2A<OiN>MYT]AST]0
+R7
+30
+R17
+!i10b 1
+R28
+R40
+R41
+!i113 1
+R20
+R13
+Eripple_carry_adder
+Z42 w1511205061
+R3
+R4
+R0
+Z43 8../vhd/ripple_carry_adder.vhd
+Z44 F../vhd/ripple_carry_adder.vhd
+l0
+L18
+Vce>2JziCBDEgCk[mM6^gF0
+!s100 HkcalW7^e47jICQC:35?Z3
+R7
+32
+R8
+!i10b 1
+R9
+Z45 !s90 -quiet|-check_synthesis|../vhd/ripple_carry_adder.vhd|
+Z46 !s107 ../vhd/ripple_carry_adder.vhd|
+!i113 1
+R12
+R13
+Agate
+R3
+R4
+DEx4 work 18 ripple_carry_adder 0 22 ce>2JziCBDEgCk[mM6^gF0
+l29
+L27
+V02VkQmhoz0gfRH0Kd3mE73
+!s100 YTW]l^MJfQ`JIK<3QPbPe1
+R7
+32
+R8
+!i10b 1
+R9
+R45
+R46
+!i113 1
+R12
+R13
+Esynthesizer
+R14
+R2
+R3
+R4
+R0
+Z47 8../vhd/synthesizer.vhd
+Z48 F../vhd/synthesizer.vhd
+l0
+L28
+V_Fln<DA?@cE:;WRhE3=o63
+!s100 D4YYOEo9JIofNk6j9PbBQ0
+R7
+30
+R17
+!i10b 1
+R28
+Z49 !s90 -quiet|-check_synthesis|-87|../vhd/synthesizer.vhd|
+Z50 !s107 ../vhd/synthesizer.vhd|
+!i113 1
+R20
+R13
+Astructural
+R2
+R3
+R4
+DEx4 work 11 synthesizer 0 22 _Fln<DA?@cE:;WRhE3=o63
+l135
+L47
+V0^J69iGQM<[F1Y[c>=i@W3
+!s100 zXEH`8UM=PQ_1STMinRW[1
+R7
+30
+R17
+!i10b 1
+R28
+R49
+R50
+!i113 1
+R20
+R13
+Etb_adder
+Z51 w1512064114
+R2
+R3
+R4
+R0
+Z52 8../tb/tb_adder.vhd
+Z53 F../tb/tb_adder.vhd
+l0
+L26
+VhW@87CFPV6YW;4D@4`3NH3
+!s100 =J1I<ZaYmdQ;>_6o6Xz@F0
+R7
+32
+R17
+!i10b 1
+R28
+Z54 !s90 -quiet|-check_synthesis|../tb/tb_adder.vhd|
+Z55 !s107 ../tb/tb_adder.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R2
+R3
+R4
+DEx4 work 8 tb_adder 0 22 hW@87CFPV6YW;4D@4`3NH3
+l71
+L30
+VioVKg4ZcfgN=OW:ZNXJo41
+!s100 j5J6MVif0_l>clHh1PW:m3
+R7
+32
+R17
+!i10b 1
+R28
+R54
+R55
+!i113 1
+R12
+R13
+Etb_audio_ctrl
+R14
+R2
+R3
+R4
+R0
+Z56 8../tb/tb_audio_ctrl.vhd
+Z57 F../tb/tb_audio_ctrl.vhd
+l0
+L26
+V<_5ROkl32MQ9FEm8_g0513
+!s100 oSL2Vf1J=AfRoVnM8eG050
+R7
+30
+R17
+!i10b 1
+R28
+Z58 !s90 -quiet|-check_synthesis|-87|../tb/tb_audio_ctrl.vhd|
+Z59 !s107 ../tb/tb_audio_ctrl.vhd|
+!i113 1
+R20
+R13
+Atestbench
+R2
+R3
+R4
+DEx4 work 13 tb_audio_ctrl 0 22 <_5ROkl32MQ9FEm8_g0513
+l127
+L36
+VN>`UN]`KmFV<TbT@G9S2L3
+!s100 FgWdQ_14YLjNXSKaQem[_2
+R7
+30
+R17
+!i10b 1
+R28
+R58
+R59
+!i113 1
+R20
+R13
+Etb_i2c_config
+R14
+R2
+R3
+R4
+R0
+Z60 8../tb/tb_i2c_config.vhd
+Z61 F../tb/tb_i2c_config.vhd
+l0
+L22
+V[ekCW1bF19a0O[3jO=LzG3
+!s100 GfXf3BK6SQ;bAkB6@Lh`B3
+R7
+30
+R17
+!i10b 1
+R28
+Z62 !s90 -quiet|-87|../tb/tb_i2c_config.vhd|
+Z63 !s107 ../tb/tb_i2c_config.vhd|
+!i113 1
+Z64 o-quiet -87
+R13
+Atestbench
+R2
+R3
+R4
+DEx4 work 13 tb_i2c_config 0 22 [ekCW1bF19a0O[3jO=LzG3
+l133
+L26
+VY6WTGz;db`kOeQjnCRSP[1
+!s100 m?l]VUkR9lK7j`J8:SPHa2
+R7
+30
+R17
+!i10b 1
+R28
+R62
+R63
+!i113 1
+R64
+R13
+Etb_multi_port_adder
+Z65 w1517151784
+R2
+R3
+R4
+R0
+Z66 8../tb/tb_multi_port_adder.vhd
+Z67 F../tb/tb_multi_port_adder.vhd
+l0
+L22
+VE`;WX?QHIE5>KU5PE9S^P1
+!s100 b[5b;z?K<E1`Szd:E3e]b1
+R7
+31
+R17
+!i10b 1
+R28
+Z68 !s90 -quiet|-check_synthesis|-93|../tb/tb_multi_port_adder.vhd|
+Z69 !s107 ../tb/tb_multi_port_adder.vhd|
+!i113 1
+Z70 o-quiet -check_synthesis -93
+R13
+Atestbench
+R2
+R3
+R4
+DEx4 work 19 tb_multi_port_adder 0 22 E`;WX?QHIE5>KU5PE9S^P1
+l78
+L28
+VScK=lE3Jj81^_kIekV@og2
+!s100 >ne<l9Y6g>K<V0=onLLQY2
+R7
+31
+R17
+!i10b 1
+R28
+R68
+R69
+!i113 1
+R70
+R13
+Etb_piano
+R37
+R2
+R3
+R4
+R0
+Z71 8../tb/tb_piano.vhd
+Z72 F../tb/tb_piano.vhd
+l0
+L19
+V31[Lh5JT6A76D:8FhOG2A0
+!s100 L2EkYAK9jLZ7G4UXXZW_A2
+R7
+30
+R17
+!i10b 1
+R28
+Z73 !s90 -quiet|-87|../tb/tb_piano.vhd|
+Z74 !s107 ../tb/tb_piano.vhd|
+!i113 1
+R64
+R13
+Atestbench
+R2
+R3
+R4
+DEx4 work 8 tb_piano 0 22 31[Lh5JT6A76D:8FhOG2A0
+l53
+L23
+VP@QkDEEanZ;3dDiMRa?1j0
+!s100 Ya[:e<[[34N>eWfUNBTiR3
+R7
+30
+R17
+!i10b 1
+R28
+R73
+R74
+!i113 1
+R64
+R13
+Etb_ripple_carry_adder
+Z75 w1511000261
+R2
+R3
+R4
+R0
+Z76 8../tb/tb_ripple_carry_adder.vhd
+Z77 F../tb/tb_ripple_carry_adder.vhd
+l0
+L30
+V0UZ:;PCW_bD=Vd^aDeLEk1
+!s100 3RFIGgdFMOeA2Mi?R70^R2
+R7
+32
+R17
+!i10b 1
+R28
+Z78 !s90 -quiet|-check_synthesis|../tb/tb_ripple_carry_adder.vhd|
+Z79 !s107 ../tb/tb_ripple_carry_adder.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R2
+R3
+R4
+DEx4 work 21 tb_ripple_carry_adder 0 22 0UZ:;PCW_bD=Vd^aDeLEk1
+l61
+L35
+V>eQ^>dZijieVc=UjBDmaC3
+!s100 NVElk9D;_XW15@@<KMb0Y0
+R7
+32
+R17
+!i10b 1
+R28
+R78
+R79
+!i113 1
+R12
+R13
+Etb_synthesizer
+R37
+R2
+R3
+R4
+R0
+Z80 8../tb/tb_synthesizer.vhd
+Z81 F../tb/tb_synthesizer.vhd
+l0
+L26
+VhNSDJUWXeoo]BmZ<Rae370
+!s100 DGd9O>J8nW0ozKL]8d5mg3
+R7
+30
+R17
+!i10b 1
+R28
+Z82 !s90 -quiet|-check_synthesis|-87|../tb/tb_synthesizer.vhd|
+Z83 !s107 ../tb/tb_synthesizer.vhd|
+!i113 1
+R20
+R13
+Astructural
+R2
+R3
+R4
+DEx4 work 14 tb_synthesizer 0 22 hNSDJUWXeoo]BmZ<Rae370
+l88
+L31
+VOkLa5PJ1iAj0g<Y8?M1:n1
+!s100 4W5L<ZAR]FIf^^hj^nGfX2
+R7
+30
+R17
+!i10b 1
+R28
+R82
+R83
+!i113 1
+R20
+R13
+Etb_wave_gen
+R14
+R2
+R3
+R4
+R0
+Z84 8../tb/tb_wave_gen.vhd
+Z85 F../tb/tb_wave_gen.vhd
+l0
+L24
+V2F3[9Q8[BanSi=bHM8gg[3
+!s100 7`fod5`DdmAb7JAZ1@PTm3
+R7
+32
+R17
+!i10b 1
+R28
+Z86 !s90 -quiet|-check_synthesis|../tb/tb_wave_gen.vhd|
+Z87 !s107 ../tb/tb_wave_gen.vhd|
+!i113 1
+R12
+R13
+Atestbench
+R2
+R3
+R4
+DEx4 work 11 tb_wave_gen 0 22 2F3[9Q8[BanSi=bHM8gg[3
+l73
+L29
+V@@ENB<b`A5Uo4YHB1^le=2
+!s100 Mnj6fb??@>J9oA5QFNcLP2
+R7
+32
+R17
+!i10b 1
+R28
+R86
+R87
+!i113 1
+R12
+R13
+Ewave_gen
+R14
+R21
+R2
+R3
+R4
+R0
+Z88 8../vhd/wave_gen.vhd
+Z89 F../vhd/wave_gen.vhd
+l0
+L27
+V9V4F_:JPR<O:BizKXNYh91
+!s100 H4TZZ];Q9EdJFl?K?mWUF1
+R7
+30
+R8
+!i10b 1
+R9
+Z90 !s90 -quiet|-check_synthesis|-87|../vhd/wave_gen.vhd|
+Z91 !s107 ../vhd/wave_gen.vhd|
+!i113 1
+R20
+R13
+Artl
+R21
+R2
+R3
+R4
+DEx4 work 8 wave_gen 0 22 9V4F_:JPR<O:BizKXNYh91
+l96
+L42
+VgI^3FLVmTF5AUn6:TMUZB1
+!s100 AbPXRQ5CcKI4Vjgh;FabZ2
+R7
+30
+R8
+!i10b 1
+R9
+R90
+R91
+!i113 1
+R20
+R13
